@@ -21,3 +21,62 @@ body {
         linear-gradient(to right, rgba(0, 150, 255, 0.1) 1px, transparent 1px);
     background-size: 100% 100%, 1px 40px, 40px 30px;
 }
+
+h1 {
+    text-align: center;
+}
+.card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 0.2rem 1.5rem 2rem;
+    position: relative;
+    border: 1px solid #1e293b;
+    margin-top: 50px;
+}
+.card::before{
+    content: "";
+    position: absolute;
+    top: 0; left: 10%; right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--primary), transparent);
+    box-shadow: 0 0 15px var(--primary);
+}
+#word-input {
+    padding: 12px;
+    border: 1px solid #1e293b;
+    border-radius: 10px;
+    background: none;
+    color: #F1F1F1;
+    font-weight: 300;
+    flex: 1;
+}
+
+#word-input:hover {
+    outline: none;
+    box-shadow: 0 0 3px 2px var(--primary);
+}
+
+.search-ctn {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+#search-btn {
+    padding: 10px;
+    border: 1px solid #1e293b;   
+    border-radius: 100%;
+    background: none;
+    color: #F1F1F1;
+    cursor: pointer;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#search-btn:hover {
+    box-shadow: 0 0 3px 2px var(--primary);
+}
+
