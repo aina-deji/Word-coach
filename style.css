@@ -25,6 +25,11 @@ body {
 h1 {
     text-align: center;
 }
+.screen {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
 .card {
     background: var(--card-bg);
     border-radius: 15px;
@@ -80,3 +85,38 @@ h1 {
     box-shadow: 0 0 3px 2px var(--primary);
 }
 
+.error-text {
+    color: #FF4E4EAD;
+    transform: translateY(-63px);
+    font-size: 8pt;
+    font-weight: bold;
+    
+}
+#result-screen{
+    display: none;
+    text-align: center;
+}
+#back-btn {
+    border: 0.9px solid #4E4EFF;
+    padding: 8px 22px;
+    border-radius: 10px;
+    background-color: hsla(240, 50%, 36%, 0.94);
+    color: #4E4EFF;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+#back-btn:hover {
+    opacity: 0.9;
+}
+
+.screen {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+#word-display {
+    margin: 20px 0;
+    line-height: 1.6;
+}
