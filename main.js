@@ -28,6 +28,9 @@ async function handleSearch() {
     } catch (err) {
         errorMessage.textContent = 'Check your internet connection and try again';
         errorMessage.classList.add('network-err');
-        
+        setTimeout(() => {
+            
+            errorMessage.classList.remove('network-err');
+        }, 1000);
     }
 }

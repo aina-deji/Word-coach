@@ -38,13 +38,19 @@ h1 {
     border: 1px solid #1e293b;
     margin-top: 50px;
 }
-.card::before{
+.card::before, .card::after{
     content: "";
     position: absolute;
-    top: 0; left: 10%; right: 10%;
+ left: 10%; right: 10%;
     height: 1px;
     background: linear-gradient(90deg, transparent, var(--primary), transparent);
     box-shadow: 0 0 15px var(--primary);
+}
+.card::before{
+    top: 0;
+}
+.card::after{
+    bottom: 0;
 }
 #word-input {
     padding: 12px;
@@ -92,6 +98,24 @@ h1 {
     font-weight: bold;
     
 }
+.network-err {
+    padding: 5px; 
+    width: 260px;
+    border-radius: 8px;
+    background-color: #F8F7FF;
+    color: #0F0F0F;
+    font-weight: 400;
+    font-size: 15px;
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    opacity: 90%;
+    transition: opacity 0.9s ease;
+}
+
+
 #result-screen{
     display: none;
     text-align: center;
