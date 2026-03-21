@@ -21,7 +21,7 @@ A state-driven vocabulary app built with vanilla JavaScript, inspired by Google 
 - API integration.
 - Audio pronunciation
 - definitions and part of speech
-- 
+- error-handling
 ## Getting Started
 1. Clone the repo:  
    `git clone https://github.com/aina-deji/word-coach.git`  

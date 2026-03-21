@@ -35,6 +35,9 @@ async function handleSearch() {
         }, 5000);
     }
 };
+    wordInput.addEventListener('focus', () => {
+    errorMessage.textContent = '';
+    });
 
 function displayResult(data) {
     const display = document.getElementById('word-display');

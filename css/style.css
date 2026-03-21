@@ -122,8 +122,10 @@ h1 {
 }
 .icon-btn {
     border: none;
-    border-radius: 5px;
-    padding: 5px;
+    border-radius: 50%;
+    padding: 0;
+    width: 40px;
+    height: 40px;
     background: var(--primary);
     display: inline-flex;
     align-items: center;
@@ -134,7 +136,7 @@ h1 {
     border: 0.9px solid #4E4EFF;
     padding: 8px 22px;
     border-radius: 10px;
-    background-color: hsla(240, 50%, 36%, 0.94);
+    background-color: hsla(235, 83%, 31%, 0.94);
     color: #4E4EFF;
     cursor: pointer;
     font-size: 1rem;
