@@ -92,9 +92,9 @@ h1 {
 }
 
 .error-text {
-    color: #FF4E4EAD;
+    color: #FB1B1BD4;
     transform: translateY(-63px);
-    font-size: 8pt;
+    font-size: 9pt;
     font-weight: bold;
     
 }
@@ -120,6 +120,16 @@ h1 {
     display: none;
     text-align: center;
 }
+.icon-btn {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    background: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #back-btn {
     border: 0.9px solid #4E4EFF;
     padding: 8px 22px;
