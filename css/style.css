@@ -122,7 +122,7 @@ h1 {
 }
 .icon-btn {
     border: none;
-    border-radius: 50%;
+    border-radius: 100px;
     padding: 0;
     width: 40px;
     height: 40px;
@@ -131,6 +131,15 @@ h1 {
     align-items: center;
     justify-content: center;
 }
+a[href^="https://en.wikipedia.org"]::after {
+        content: "↗";
+        font-size: 0.8em;
+        vertical-align: super;
+        color: var(--primary);
+        margin-left: 4px;
+        font-weight: bold;
+    }
+
 
 #back-btn {
     border: 0.9px solid #4E4EFF;

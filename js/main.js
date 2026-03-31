@@ -62,4 +62,4 @@ display.innerHTML = `
  <p>${definition}</p>
     `;
 }
-showScreen('search-screen');
+//showScreen('search-screen');
