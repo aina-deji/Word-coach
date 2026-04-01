@@ -9,7 +9,9 @@ body {
     background: var(--bg); 
     color: white; 
     height: 100vh;
-    display: flex;
+    display: grid;
+grid-template-rows: 1fr auto;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0;
@@ -164,4 +166,22 @@ a[href^="https://en.wikipedia.org"]::after {
 #word-display {
     margin: 20px 0;
     line-height: 1.6;
+}
+#footer-section{
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 10px;
+    text-align: center;
+    filter: invert(0.5);
+}
+.footer-icon{
+   width: 15px;
+  height: 15px;
+  display: block;
+  filter: invert(0.5);
+  transition: 0.3s;
 }
