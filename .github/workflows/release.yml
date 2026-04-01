@@ -12,31 +12,33 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-      # 1. Pull the code (fetch-depth: 0 is required to see all history/tags)
       - name: Checkout Code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      # 2. Run the Versioning Brain
       - name: Semantic Release
         id: semantic
         uses: cycjimmy/semantic-release-action@v4
+        with:
+          # This tells the robot to work even without a complex setup
+          extra_plugins: |
+            @semantic-release/commit-analyzer
+            @semantic-release/release-notes-generator
+            @semantic-release/git
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # 3. Use 'sed' to inject the version into index.html
       - name: Update Version in HTML
         if: steps.semantic.outputs.new_release_published == 'true'
         run: |
           sed -i "s/APP_VERSION/${{ steps.semantic.outputs.new_release_version }}/g" index.html
           
-      # 4. Commit the change back to the repo
       - name: Commit version change
         if: steps.semantic.outputs.new_release_published == 'true'
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add index.html
+          git add index.html package.json
           git commit -m "chore: bump version to ${{ steps.semantic.outputs.new_release_version }} [skip ci]"
           git push
