@@ -8,7 +8,7 @@ body {
     box-sizing: border-box;
     background: var(--bg); 
     color: white; 
-    height: 100vh;
+    height: 100dvh;
     display: grid;
 grid-template-rows: 1fr auto;
     flex-direction: column;
@@ -22,9 +22,19 @@ grid-template-rows: 1fr auto;
         linear-gradient(to bottom, rgba(0, 150, 255, 0.1) 1px, transparent 1px),
         linear-gradient(to right, rgba(0, 150, 255, 0.1) 1px, transparent 1px);
     background-size: 100% 100%, 1px 40px, 40px 30px;
+    overflow: hidden;
+}
+h1{
+    font-size: 28px;
+    text-align: center;
+    font-family: "inter" roboto;
+    font-weight: 800;
+    max-width: 73%; 
+    margin: 0 auto;
+    
 }
 
-h1 {
+h2 {
     text-align: center;
 }
 .screen {
@@ -34,17 +44,18 @@ h1 {
 }
 .card {
     background: var(--card-bg);
-    border-radius: 15px;
-    padding: 0.2rem 1.5rem 2rem;
+    border-radius: 25px;
+    width: 280px;
+    padding: 0.2rem 1rem 2rem 1rem;
     position: relative;
     border: 1px solid #1e293b;
-    margin-top: 50px;
+    margin: 15px auto;
 }
 .card::before, .card::after{
     content: "";
     position: absolute;
  left: 10%; right: 10%;
-    height: 1px;
+    height: 1.5px;
     background: linear-gradient(90deg, transparent, var(--primary), transparent);
     box-shadow: 0 0 15px var(--primary);
 }
@@ -55,13 +66,13 @@ h1 {
     bottom: 0;
 }
 #word-input {
-    padding: 12px;
+    padding: 16px;
     border: 1px solid #1e293b;
-    border-radius: 10px;
-    background: none;
+    background: transparent;
+    border-radius: 15px;
     color: #F1F1F1;
     font-weight: 300;
-    flex: 1;
+    flex: 0.5;
 }
 
 #word-input:hover {
@@ -82,8 +93,8 @@ h1 {
     background: none;
     color: #F1F1F1;
     cursor: pointer;
-    width: 42px;
-    height: 42px;
+    width: 45px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -182,6 +193,5 @@ a[href^="https://en.wikipedia.org"]::after {
    width: 15px;
   height: 15px;
   display: block;
-  filter: invert(0.5);
   transition: 0.3s;
 }

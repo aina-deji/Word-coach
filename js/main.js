@@ -5,6 +5,17 @@ const speakerIcon = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox
     <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.59-.707-1.59-1.59V9.84c0-.88.71-1.59 1.59-1.59h2.24Z" />
 </svg>`;
 
+const getGreeting = () => {
+  const hour = new Date().getHours();
+  if (hour < 12) return "Good Morning! Ready to learn?";
+  if (hour < 17) return "Good Afternoon! Expand your vocab.";
+  if (hour < 21) return "Good Evening! a quick word before dinner?";
+  return "Late night learning? You're dedicated!";
+};
+
+// Target your title element and update it
+document.getElementById('greetings').innerText = getGreeting();
+
 function showScreen(screenId) {
     document.querySelectorAll('.screen').forEach(s => s.style.display = 'none');
     document.getElementById(screenId).style.display = 'block';
@@ -61,5 +72,20 @@ display.innerHTML = `
  <p><i>${partOfSpeech}</i></p>
  <p>${definition}</p>
     `;
+    
+    // displays Wikipedia link
+   displayWikipediaLink(data.word);
 }
+
+function displayWikipediaLink(word) {
+    const resultDiv = document.getElementById('result-container');
+    const formattedWord = word.trim().replace(/\s+/g, '_');
+    const wikiUrl = `https://en.wikipedia.org/wiki/${formattedWord}`;
+    resultDiv.innerHTML = `
+        <p>Learn more on 
+            <a href="${wikiUrl}" target="_blank">Wikipedia</a>
+        </p>
+    `;
+}
+
 //showScreen('search-screen');
