@@ -4,6 +4,7 @@ const DICTIONARY_API = 'https://api.dictionaryapi.dev/api/v2/entries/en/';
 const speakerIcon = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 24px; height: 24px;">
     <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.59-.707-1.59-1.59V9.84c0-.88.71-1.59 1.59-1.59h2.24Z" />
 </svg>`;
+const currentYear = document.getElementById('current-year');
 
 const getGreeting = () => {
   const hour = new Date().getHours();
@@ -88,4 +89,5 @@ function displayWikipediaLink(word) {
     `;
 }
 
+currentYear.textContent = new Date().getFullYear();
 //showScreen('search-screen');
